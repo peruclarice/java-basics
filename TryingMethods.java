@@ -88,49 +88,44 @@ public class TryingMethods {
     }
 
     // Static Method 1
-    public static int addingOneThousand(){
-        int sum = 0;
-        for(int i = 1; i < 1000; i++){
-            sum += 1;
+    public static int addingTwo(){
+        int sum= 0;
+        int i = 1;
+        while (i<=1000) {
+            sum+=i;
+            i++;
         }
         return sum;
     }
 
-    public static int addingTwo(){
-        int summ = 990;
-        while ( summ < 1000 ) {
-            summ += 1;
-        }
-        return summ;
-    }
-
     // Static Method 2
     public static void staticSecondChild(){
-        // int i = 0;
+        int summOfEvenNumbers = 0;
         
         for (int i = 12; i < 103; i++){
             if (i % 2 == 0){
-                System.out.println(i);
+                summOfEvenNumbers += i;
             }
+            System.out.println(summOfEvenNumbers);
         }
     }
     
     public static void main(String[] args){
-        
+
         // Calling dynamic method 1
         TryingMethods newObject = new TryingMethods();
         System.out.println(newObject.firstChild(5));
-
-        // Calling sum Static method
-        System.out.println(addingOneThousand());
 
         // calling dynamic method 2
         TryingMethods secondObject = new TryingMethods();
         secondObject.gradingSystem(2);
 
-        // Calling static method 2
-        // staticSecondChild();
+        // System.out.println(addingOneThousand());
 
+        // Calling static method 2
+        staticSecondChild();
+
+        // Calling static method 1
         System.out.println(addingTwo());
 
     }

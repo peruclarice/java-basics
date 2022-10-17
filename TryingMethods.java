@@ -69,39 +69,43 @@ public class TryingMethods {
     }
 
     // Dynamic Method 2
-    public void secondChild(String bestArtist){
-        int westAfricanArtis = 3;
-        int eastAfricaArtist = 4;
-        // String bestArtists = "";
+    public void gradingSystem(int grade){
+        int topGrade = 4;
+        int middleGrade = 3;
+        int lowGrade = 2;
 
-        // If statement
-        if (westAfricanArtis >= eastAfricaArtist ){
-            System.out.println("The best artist is Tiwa Savage");
+        if (grade >= topGrade ){
+            System.out.println("Exceeded Expectations");
+        } else if( grade == middleGrade ) {
+            System.out.println("Met Expectations");
         }
-        else if (westAfricanArtis <= eastAfricaArtist){
-            System.out.println("The best artist is Sauti Sol");
-        } 
-        else{
-            System.out.println("The best artist is still Sauti Sol");
+        else if( grade >= lowGrade ) {
+            System.out.println("Below Expectations");
         }
-
-        System.out.println("Im yours");
+        else {
+            System.out.println("Please see me");
+        }
     }
 
     // Static Method 1
-    public static int staticFirstChild(int sumNumbers){
-
-        // Creating a while loop that prints the numbers until it reaches 1000
-        while (sumNumbers < 1000){
-            System.out.println(sumNumbers);
-            sumNumbers++;
+    public static int addingOneThousand(){
+        int sum = 0;
+        for(int i = 1; i < 1000; i++){
+            sum += 1;
         }
-        return sumNumbers;
+        return sum;
+    }
+
+    public static int addingTwo(){
+        int summ = 990;
+        while ( summ < 1000 ) {
+            summ += 1;
+        }
+        return summ;
     }
 
     // Static Method 2
     public static void staticSecondChild(){
-        System.out.println("Im yours");
         // int i = 0;
         
         for (int i = 12; i < 103; i++){
@@ -113,10 +117,21 @@ public class TryingMethods {
     
     public static void main(String[] args){
         
+        // Calling dynamic method 1
         TryingMethods newObject = new TryingMethods();
         System.out.println(newObject.firstChild(5));
 
-        staticSecondChild();
-        staticFirstChild(990);
+        // Calling sum Static method
+        System.out.println(addingOneThousand());
+
+        // calling dynamic method 2
+        TryingMethods secondObject = new TryingMethods();
+        secondObject.gradingSystem(2);
+
+        // Calling static method 2
+        // staticSecondChild();
+
+        System.out.println(addingTwo());
+
     }
 }

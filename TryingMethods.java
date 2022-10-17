@@ -36,11 +36,35 @@
 public class TryingMethods {
 
     // Dynamic Method 1
-    public int firstChild(int dayOfTheWeek){
-        dayOfTheWeek = 3;
-        String nameOfTheWeek = "";
-        // String y = String.valueOf(dayOfTheWeek);
-        return dayOfTheWeek;
+    public String firstChild(int day){
+        String nameOfDay = "";
+        switch (day){
+            case 1:
+                nameOfDay = "Mon";
+                break;
+            case 2:
+                nameOfDay = "Tue";
+                break;
+            case 3:
+                nameOfDay = "Wed";
+                break;
+            case 4:
+                nameOfDay = "Thur";
+                break;
+            case 5:
+                nameOfDay = "Fri";
+                break;
+            case 6:
+                nameOfDay = "Sat";
+                break;
+            case 7:
+                nameOfDay = "Sun";
+                break;
+            default:
+                nameOfDay = "John is the best";
+                break;
+        }
+        return nameOfDay;
 
     }
 
@@ -89,7 +113,10 @@ public class TryingMethods {
     
     public static void main(String[] args){
         
+        TryingMethods newObject = new TryingMethods();
+        System.out.println(newObject.firstChild(5));
+
         staticSecondChild();
-        staticFirstChild(700);
+        staticFirstChild(990);
     }
 }

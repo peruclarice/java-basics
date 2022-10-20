@@ -1,43 +1,30 @@
-// This is the class TryingMethods
-
-// Create a class with the name "TryingMethods"
-// Add comments to describe what this class does
-
-// Add the a main method to this class
-
-// Add at least four methods in this class
-
-// Two of the method should be dynamic and the other two static
-
-// One of the dynamic methods should have an integer as an argument.
-// It return a string of the day of the week based on the argument that
-// was provided. Use a switch case in the body of the method.
-// The second dynamic method should return nothing but just print a
-// message to the console using an if statement with at least 3 blocks.
-// The conditions of the statement should be based on the argument or
-// parameter(s) of the method.
-
-// In one of the static methods use a while loop to find the sum of all
-// numbers less than 1000 and return the result.
-
-// Lastly, in the last method use a for loop to find the sum of even
-// numbers between 12 and 103.
-
-// ...
-
-// Push your codes to github with at least 5 commits. Ensure to use at
-// least 5 branches to manage your code.
-
-// Find someone, who you will collaborate with. The collaborator will be
-// the one to accept the PRs you raise.
-
-// Thank you and happy coding.
-
+// Creating the TryingMethods class
 public class TryingMethods {
+
+    // Main Method
+    public static void main(String[] args){
+
+        // Calling dynamic method 1
+        TryingMethods newObject = new TryingMethods();
+        System.out.println(newObject.firstChild(5));
+
+        // calling dynamic method 2
+        TryingMethods secondObject = new TryingMethods();
+        secondObject.gradingSystem(2);
+
+        // Calling static method 2
+        staticSecondChild();
+
+        // Calling static method 1
+        System.out.println(addingTwo());
+
+    }
 
     // Dynamic Method 1
     public String firstChild(int day){
         String nameOfDay = "";
+
+        // switch case
         switch (day){
             case 1:
                 nameOfDay = "Mon";
@@ -74,6 +61,7 @@ public class TryingMethods {
         int middleGrade = 3;
         int lowGrade = 2;
 
+        // this if statement compares the grade to topGrade, middleGrade and lowGrade
         if (grade >= topGrade ){
             System.out.println("Exceeded Expectations");
         } else if( grade == middleGrade ) {
@@ -88,50 +76,30 @@ public class TryingMethods {
     }
 
     // Static Method 1
-    public static int addingOneThousand(){
-        int sum = 0;
-        for(int i = 1; i < 1000; i++){
-            sum += 1;
+    public static int addingTwo(){
+
+        int sum= 0;
+        int i = 1;
+
+        // while loop for any number below 1000
+        while (i<=1000) {
+            sum+=i;
+            i++;
         }
         return sum;
     }
 
-    public static int addingTwo(){
-        int summ = 990;
-        while ( summ < 1000 ) {
-            summ += 1;
-        }
-        return summ;
-    }
-
     // Static Method 2
     public static void staticSecondChild(){
-        // int i = 0;
+        int summOfEvenNumbers = 0;
         
+        // the for loop that will get the even numbers
         for (int i = 12; i < 103; i++){
             if (i % 2 == 0){
-                System.out.println(i);
+                summOfEvenNumbers += i; // This adds the even numbers together
             }
+            System.out.println(summOfEvenNumbers);
         }
     }
     
-    public static void main(String[] args){
-        
-        // Calling dynamic method 1
-        TryingMethods newObject = new TryingMethods();
-        System.out.println(newObject.firstChild(5));
-
-        // Calling sum Static method
-        System.out.println(addingOneThousand());
-
-        // calling dynamic method 2
-        TryingMethods secondObject = new TryingMethods();
-        secondObject.gradingSystem(2);
-
-        // Calling static method 2
-        // staticSecondChild();
-
-        System.out.println(addingTwo());
-
-    }
 }

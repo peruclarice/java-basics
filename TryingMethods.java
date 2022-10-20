@@ -76,6 +76,7 @@ public class TryingMethods {
         }
     }
     
+    // Main Method
     public static void main(String[] args){
 
         // Calling dynamic method 1
